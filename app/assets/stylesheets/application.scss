@@ -1,0 +1,75 @@
+@import 'bootstrap';
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  display: inline;
+}
+
+.sidebar-main {
+  width: 20%;
+  float: left;
+  background-color: #FFFAFA;
+  margin-left: 2px;
+}
+
+.sidebar-main li {
+  list-style: none;
+}
+
+.header-main {
+  padding-right: 30px;
+  min-height: 100px;
+  background-color: #F0F8FF;
+}
+
+.navbar {
+  list-style: none;
+  float: right;
+}
+
+.navbar li {
+  padding: 10px;
+  position: relative;
+}
+
+/*Dropdown styling*/
+.navbar ul {
+  list-style: none;
+  position: absolute;
+  background-color: #F8F8FF;
+  left: -9999px;
+  /*Hide off-screen when not hovered over*/
+}
+
+.navbar ul li {
+  margin-left: -50px;
+}
+
+.navbar li:hover ul {
+  /*Display the dropdown on hover*/
+  left: 0;
+  /*Bring back on-screen when needed*/
+}
+
+.lesson-main {
+  margin-left: 22%;
+  margin-top: 15vh;
+  margin-right: 5px;
+}
+
+
+.footer-main {
+  background-color: #FFF5EE;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  margin-left: 20%;
+  padding: 10px;
+}
