@@ -9,17 +9,20 @@ h1 {
   display: inline;
 }
 
+/* --SIDEBAR-- */
 .sidebar-main {
   width: 20%;
   float: left;
   background-color: #FFFAFA;
   margin-left: 2px;
+  height: 100vh;
 }
 
 .sidebar-main li {
   list-style: none;
 }
 
+/* --HEADER-- */
 .header-main {
   padding-right: 30px;
   min-height: 100px;
@@ -36,7 +39,7 @@ h1 {
   position: relative;
 }
 
-/*Dropdown styling*/
+/* Dropdown styling */
 .navbar ul {
   list-style: none;
   position: absolute;
@@ -55,13 +58,37 @@ h1 {
   /*Bring back on-screen when needed*/
 }
 
+.landing-main {
+  text-align: center;
+}
+
 .lesson-main {
   margin-left: 22%;
   margin-top: 15vh;
   margin-right: 5px;
 }
 
+/* --TOPICS MENU-- */
 
+.topics-menu-main {
+  text-align: center;
+}
+
+.menu-topics {
+  display: flex;
+  flex-direction: row;
+}
+
+.topic {
+  width: 30%;
+}
+
+.topic ul{
+  list-style: none;
+}
+
+
+/* --FOOTER-- */
 .footer-main {
   background-color: #FFF5EE;
   height: 100px;
