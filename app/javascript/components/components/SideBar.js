@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 class SideBar extends Component {
   render() {
@@ -14,9 +15,9 @@ class SideBar extends Component {
               { html.map(lesson => {
                   return (
                     <li key={ lesson.id }>
-                      <a href={ `/lesson/${lesson.id}` }>
+                      <NavLink to={ `/lesson/${lesson.id}` }>
                         { lesson.name }
-                      </a>
+                      </NavLink>
                     </li>
                   )
                 })}
@@ -26,9 +27,9 @@ class SideBar extends Component {
               { css.map(lesson => {
                   return (
                     <li key={ lesson.id }>
-                      <a href={ `/lesson/${lesson.id}` }>
+                      <NavLink to={ `/lesson/${lesson.id}` }>
                         { lesson.name }
-                      </a>
+                      </NavLink>
                     </li>
                   )
                 })
@@ -39,9 +40,9 @@ class SideBar extends Component {
               { javascript.map(lesson => {
                   return (
                     <li key={ lesson.id }>
-                      <a href={ `/lesson/${lesson.id}` }>
+                      <NavLink to={ `/lesson/${lesson.id}` }>
                         { lesson.name }
-                      </a>
+                      </NavLink>
                     </li>
                   )
                 })

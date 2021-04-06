@@ -34,33 +34,26 @@ class App extends React.Component {
     return (
       <Router>
         <Header sign_in_route={ sign_in_route } sign_out_route={ sign_out_route } logged_in={ logged_in } />
-        { !logged_in &&
-          <Landing sign_in_route={ sign_in_route } new_user_route={ new_user_route } />
-        }
-        { logged_in &&
-          <>
-            <SideBar lessons={ lessons } />
-            <Switch>
-              <Route exact path="/" render={ (props) => <TopicMenu lessons={ lessons } /> } />
-              <Route path="/profile" render={ (props) => <UserProfile current_user={ current_user } /> } />
-              <Route
-                path="/lesson/:id"
-                render={ (props) => {
-                  let currentLesson = lessons.find(l => l.id === parseInt(props.match.params.id))
-                  return <Lesson lesson={ currentLesson } />
-                }}
-              />
-              <Route
-                path="/lesson/:id"
-                render={ (props) => {
-                  console.log(props)
-                  let currentLesson = lessons.find(l => l.id === +props.match.params.id)
-                  return <Footer lesson={ currentLesson } />
-                }}
-              />
-            </Switch>
-          </>
-        }
+        <Switch>
+          { !logged_in &&
+            <Landing sign_in_route={ sign_in_route } new_user_route={ new_user_route } />
+          }
+          { logged_in &&
+            <>
+              <SideBar lessons={ lessons } />
+                <Route exact path="/" render={ (props) => <TopicMenu lessons={ lessons } /> } />
+                <Route path="/profile" render={ (props) => <UserProfile current_user={ current_user } /> } />
+                <Route
+                  path="/lesson/:id"
+                  render={ (props) => {
+                    let currentLesson = lessons.find(l => l.id === +props.match.params.id)
+                    return <Lesson lesson={ currentLesson } />
+                  }}
+                />
+            </>
+          }
+        </Switch>
+        <Footer />
       </Router>
     );
   }

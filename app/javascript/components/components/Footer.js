@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 class Footer extends Component {
   render() {
-    const { lesson } = this.props
     return (
-      <>
-        <div className="footer-main">
-          <a href={ `/lesson/${lesson.id - 1}` }>Previous</a>
-          <a href={ `/lesson/${lesson.id + 1}` }>Next</a>
-        </div>
-      </>
+      <div className="footer-main">
+        <NavLink to="/">Topic Menu</NavLink>
+      </div>
     )
   }
 }
