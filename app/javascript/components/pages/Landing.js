@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 
 class Landing extends Component {
   render() {
-    const { sign_in_route, new_user_route } = this.props
+    const { sign_in_route, sign_up_route } = this.props
     return (
       <div className="landing-main">
         <h2>Welcome to the LEARN Prework app.</h2>
         <div>
-        <a href={ new_user_route }>Create an Account</a> |
+        <a href={ sign_up_route }>Create an Account</a> |
         Already have an account? <a href={ sign_in_route }>Sign in here</a> |
         <a href="https://www.learnacademy.org/contact-us/" target="_blank">Questions? Contact LEARN Academy</a>
         </div>
