@@ -1,15 +1,16 @@
-import React from 'react'
-import Landing from './pages/Landing'
+import React, { Component } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Landing from './pages/Landing'
 import TopicMenu from './pages/TopicMenu'
 import HTMLMenu from './pages/HTMLMenu'
 import CSSMenu from './pages/CSSMenu'
 import JSMenu from './pages/JSMenu'
+import DevMenu from './pages/DevMenu'
 import UserProfile from './pages/UserProfile'
-import SideBar from './components/SideBar'
-import Lesson from './components/Lesson'
 import CorrectAnswer from './components/CorrectAnswer'
+import Lesson from './components/Lesson'
+import SideBar from './components/SideBar'
 import {
   BrowserRouter as Router,
   Route,
@@ -18,13 +19,18 @@ import {
 
 import lessons from './lessons.js'
 
-class App extends React.Component {
+class App extends Component {
   constructor(props){
     super(props)
     this.state = {
       lessons: lessons
     }
   }
+
+  submittedAnswer = (answer) => {
+    console.log(answer)
+  }
+
   render () {
     const {
       logged_in,
@@ -55,7 +61,7 @@ class App extends React.Component {
               }} />
               <Route path="/lesson/:id" render={ (props) => {
                 let currentLesson = lessons.find(l => l.id === +props.match.params.id)
-                return <Lesson lesson={ currentLesson } />
+                return <Lesson lesson={ currentLesson } submittedAnswer={ this.submittedAnswer } />
               }} />
               <Route path="/html" render={ (props) => {
                 let htmlLessons = lessons.filter(value => value.topic === "html")
@@ -69,6 +75,10 @@ class App extends React.Component {
                 let jsLessons = lessons.filter(value => value.topic === "javascript")
                 return <JSMenu jsLessons={ jsLessons } />
               }} />
+              <Route path="/dev" render={ (props) => {
+                let devLessons = lessons.filter(value => value.topic === "dev")
+                return <DevMenu devLessons={ devLessons } />
+              }} />
               <Route path="/correct/:id" render={ (props) => {
                 let currentLesson = lessons.find(l => l.id === +props.match.params.id)
                 return <CorrectAnswer lesson={ currentLesson } />
@@ -79,7 +89,6 @@ class App extends React.Component {
             </>
           }
         </Switch>
-        { logged_in && <Footer /> }
       </Router>
     );
   }

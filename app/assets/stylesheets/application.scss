@@ -1,32 +1,46 @@
 @import 'bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 body, html {
-  height: 100%;
   margin: 0;
+  color: #313133;
+  font-size: 18px;
 }
 
 h1 {
   display: inline;
+  color: #A670AF;
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
 }
 
-/* --SIDEBAR-- */
-.sidebar-main {
-  width: 20%;
-  float: left;
-  background-color: #FFFAFA;
-  margin-left: 2px;
-  height: 100vh;
+.links {
+  color: white;
+  font-size: 18px;
 }
 
-.sidebar-main li {
-  list-style: none;
+.links:hover {
+  color: #6FBD73;
 }
 
-/* --HEADER-- */
+.block-button {
+  background-color: #A670AF;
+  border: 0px;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* -----HEADER----- */
 .header-main {
-  padding-right: 30px;
-  min-height: 100px;
-  background-color: #F0F8FF;
+  padding-right: 50px;
+  background-color: #313133;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-logo {
+  width: 225px;
 }
 
 .navbar {
@@ -35,65 +49,125 @@ h1 {
 }
 
 .navbar li {
-  padding: 10px;
+  padding: 20px;
   position: relative;
+  color: #A670AF;
 }
 
-/* Dropdown styling */
+.navbar li:hover {
+  color: white;
+}
+
 .navbar ul {
+  /* Dropdown styling */
   list-style: none;
   position: absolute;
-  background-color: #F8F8FF;
   left: -9999px;
   /*Hide off-screen when not hovered over*/
 }
 
 .navbar ul li {
-  margin-left: -50px;
+  background-color: #313133;
+  width: 300px;
+  margin-left: -200px;
 }
 
 .navbar li:hover ul {
   /*Display the dropdown on hover*/
-  left: 0;
   /*Bring back on-screen when needed*/
+  left: 0;
 }
 
+.header-drop-menu {
+  color: white;
+}
+
+/* -----SIDEBAR----- */
+.sidebar-main {
+  width: 20%;
+  float: left;
+  background-color: #A670AF;
+  padding-left: 5px;
+  margin-top: -20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-main li {
+  list-style: none;
+}
+
+
+
+/* -----LANDING----- */
 .landing-main {
   text-align: center;
+  margin-top: 120px;
 }
 
+.landing-nav {
+  background-color: #A670AF;
+  color: #101820;
+  margin-top: 20px;
+  font-size: 20px;
+  font-kerning: 2px;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.landing-nav a {
+  color: #101820
+}
+
+/* -----LESSON----- */
 .lesson-main {
   margin-left: 22%;
-  margin-top: 15vh;
+  margin-top: 120px;
   margin-right: 5px;
 }
 
-/* --TOPICS MENU-- */
+input {
+  margin: 5px;
+}
+
+/* -----TOPICS MENU----- */
 
 .topics-menu-main {
   text-align: center;
+  margin-top: 120px;
 }
 
-.menu-topics {
+.topics-description {
+  padding: 20px;
+}
+
+.topics-menu {
   display: flex;
   flex-direction: row;
 }
 
 .topic {
+  text-align: center;
   width: 30%;
 }
 
 .topic ul{
   list-style: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-/* --HTML/CSS/JS-- */
+/* -----HTML/CSS/JS----- */
 .individual-menu {
-
+  margin-left: 25%;
+  margin-top: 120px;
 }
 
 
-/* --FOOTER-- */
+/* -----FOOTER----- */
 .footer-main {
   background-color: #FFF5EE;
   height: 2rem;
