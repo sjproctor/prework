@@ -7,6 +7,7 @@ class SideBar extends Component {
     const html = lessons.filter(lesson => lesson.topic === "html")
     const css = lessons.filter(lesson => lesson.topic === "css")
     const javascript = lessons.filter(lesson => lesson.topic === "javascript")
+    const dev = lessons.filter(lesson => lesson.topic === "dev")
     return (
       <>
         <div className="sidebar-main">
@@ -15,7 +16,7 @@ class SideBar extends Component {
               { html.map(lesson => {
                 return (
                   <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` }>
+                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
                       { lesson.name }
                     </NavLink>
                     <span>{ lesson.completed && "✅" }</span>
@@ -28,7 +29,7 @@ class SideBar extends Component {
               { css.map(lesson => {
                 return (
                   <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` }>
+                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
                       { lesson.name }
                     </NavLink>
                     <span>{ lesson.completed && "✅" }</span>
@@ -41,7 +42,20 @@ class SideBar extends Component {
               { javascript.map(lesson => {
                 return (
                   <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` }>
+                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
+                      { lesson.name }
+                    </NavLink>
+                    <span>{ lesson.completed && "✅" }</span>
+                  </li>
+                )
+              })}
+            </ul>
+          <h3>Dev Tools</h3>
+            <ul>
+              { dev.map(lesson => {
+                return (
+                  <li key={ lesson.id }>
+                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
                       { lesson.name }
                     </NavLink>
                     <span>{ lesson.completed && "✅" }</span>
