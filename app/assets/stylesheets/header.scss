@@ -1,0 +1,74 @@
+/* -----HEADER----- */
+
+h1 {
+  color: #A670AF;
+  display: inline;
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
+}
+
+.header-main {
+  background-color: #313133;
+  padding-right: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-logo {
+  width: 225px;
+}
+
+.navbar {
+  float: right;
+  list-style: none;
+}
+
+.navbar li {
+  padding: 20px;
+  position: relative;
+  color: #A670AF;
+}
+
+.navbar li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.navbar ul {
+  /*Hide off-screen when not hovered over*/
+  left: -9999px;
+  list-style: none;
+  position: absolute;
+}
+
+.navbar ul li {
+  background-color: #313133;
+  width: 300px;
+  margin-left: -200px;
+}
+
+.navbar li:hover ul {
+  /*Display the dropdown on hover*/
+  /*Bring back on-screen when needed*/
+  left: 0;
+}
+
+.header-link{
+  color: #A670AF;
+}
+
+.header-link:hover {
+  color: white;
+}
+
+/* -----DEVISE----- */
+.devise-header-button a {
+  background-color: #A670AF;
+  border: 0px;
+  color: white;
+  float: right;
+  margin-top: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

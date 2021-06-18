@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header-main">
+      <a href="/landing">
+        <%= image_tag 'LEARN.png', :alt => 'LEARN Academy logo', :class => 'header-logo' %>
+      </a>
+      <h1>Cohort Prework</h1>
+      <span class="devise-header-button">
+        <%= render 'devise/shared/links' %>
+      </span>
+    </div>
+    <div class="login-main">
+      <h2>Log In To Your Account</h2>
+      <br />
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Email' %>
+        </div><br />
+
+        <div class="field">
+          <%= f.password_field :password, autocomplete: 'current-password', placeholder: 'Password' %>
+        </div><br />
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div><br />
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit 'LOG IN', :class => 'block-button'  %>
+        </div>
+      <% end %>
+
+    </div>
+  </body>
+</html>

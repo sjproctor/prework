@@ -22,11 +22,11 @@ class Header extends Component {
           { logged_in &&
             <li>TOPIC
               <ul className="header-drop-menu">
-                <li><NavLink to="/" className="links">Topic Menu</NavLink></li>
-                <li><NavLink to="/html" className="links">HTML</NavLink></li>
-                <li><NavLink to="/css" className="links">CSS</NavLink></li>
-                <li><NavLink to="/javascript" className="links">JavaScript</NavLink></li>
-                <li><NavLink to="/dev" className="links">Dev Tools</NavLink></li>
+                <li><NavLink to="/" className="header-link">Topic Menu</NavLink></li>
+                <li><NavLink to="/html" className="header-link">HTML</NavLink></li>
+                <li><NavLink to="/css" className="header-link">CSS</NavLink></li>
+                <li><NavLink to="/javascript" className="header-link">JavaScript</NavLink></li>
+                <li><NavLink to="/dev" className="header-link">Dev Tools</NavLink></li>
               </ul>
             </li>
           }
@@ -34,24 +34,18 @@ class Header extends Component {
             <li>USER
               <ul className="header-drop-menu">
                 <>
-                  <li><NavLink to="/profile" className="links">Profile</NavLink></li>
-                  <li><NavLink to="/something" className="links">Something</NavLink></li>
-                  <li><a href={ sign_out_route } className="links">Sign Out</a></li>
-                  <li><a href="https://www.learnacademy.org/contact-us/" className="links">Contact LEARN</a></li>
+                  <li><NavLink to="/profile" className="header-link">Profile</NavLink></li>
+                  <li><NavLink to="/something" className="header-link">Something</NavLink></li>
+                  <li><a href={ sign_out_route } className="header-link">Sign Out</a></li>
+                  <li><a href="https://www.learnacademy.org/contact-us/" className="header-link">Contact LEARN</a></li>
                 </>
               </ul>
             </li>
           }
           { !logged_in &&
-            <li>SIGN IN
-              <ul className="header-drop-menu">
-                <>
-                  <li><a href={ sign_up_route } className="links">Create an account</a></li>
-                  <li><a href={ sign_in_route } className="links">Sign In</a></li>
-                  <li><a href="https://www.learnacademy.org/contact-us/" className="links">Contact LEARN</a></li>
-                </>
-              </ul>
-            </li>
+            <div className="devise-header-button">
+              <a href={ sign_in_route }>SIGN IN</a>
+            </div>
           }
         </ul>
       </div>

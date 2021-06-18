@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 class TopicMenu extends Component {
   render() {
@@ -8,7 +9,7 @@ class TopicMenu extends Component {
     const javascript = lessons.filter(lesson => lesson.topic === "javascript")
     const dev = lessons.filter(lesson => lesson.topic === "dev")
     return (
-      <div className="topics-menu-main">
+      <div className="topics-menu-body">
         <div className="topics-description">
           <h3>Menu of Topics</h3>
           <div>
@@ -16,7 +17,7 @@ class TopicMenu extends Component {
           </div>
         </div>
         <br />
-        <div className="topics-menu">
+        <div className="topics-menu-full">
           <section className="topic">
             <h2>HTML</h2>
             <ul>
@@ -77,6 +78,14 @@ class TopicMenu extends Component {
               })}
             </ul>
           </section>
+        </div>
+
+        {/* ---BREAKPOINTS--- */}
+        <div className="topics-menu-mobile">
+          <NavLink to="/html" className="topic-mobile">HTML</NavLink>
+          <NavLink to="/html" className="topic-mobile">CSS</NavLink>
+          <NavLink to="/html" className="topic-mobile">JavaScript</NavLink>
+          <NavLink to="/html" className="topic-mobile">Dev Tools</NavLink>
         </div>
       </div>
     )
