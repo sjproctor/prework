@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header-main">
+      <a href="/landing">
+        <%= image_tag 'LEARN.png', :alt => 'LEARN Academy logo', :class => 'header-logo' %>
+      </a>
+      <h1>Cohort Prework</h1>
+      <span class="devise-header-button">
+        <%= render 'devise/shared/links' %>
+      </span>
+    </div>
+    <div class="login-main">
+      <h2>Create a New Account</h2>
+      <br />
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render 'devise/shared/error_messages', resource: resource %>
+        <div class="login-section">
+          <section class="login-row">
+            <div class="field">
+              <%= f.text_field :firstname, autofocus: true, autocomplete: 'firstname', placeholder: 'First Name' %>
+            </div><br />
+
+            <div class="field">
+              <%= f.text_field :lastname, autofocus: true, autocomplete: 'lastname', placeholder: 'Last Name' %>
+            </div><br />
+
+            <div class="field">
+              <%= f.select :cohort, ['Delta 2021', 'Echo 2021', 'Alpha 2022'], autofocus: true, autocomplete: 'cohort', :prompt => 'Cohort' %>
+            </div><br />
+          </section>
+
+          <section class="login-row">
+            <div class="field">
+              <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Email' %>
+            </div><br />
+
+            <div class="field">
+              <%= f.password_field :password, autocomplete: 'new-password', placeholder: 'Password' %><br />
+            </div><br />
+
+            <div class="field">
+              <%= f.password_field :password_confirmation, autocomplete: 'new-password', placeholder: 'Confirm Password' %>
+            </div><br />
+          </section>
+        </div><br />
+
+        <div class="actions">
+          <%= f.submit 'SIGN UP', :class => 'block-button' %>
+        </div>
+      <% end %>
+
+    </div>
+  </body>
+</html>
