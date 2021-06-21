@@ -12,7 +12,11 @@
 - React-router-dom
 
 
-
+#### LEARN Color Scheme
+- DARK GREY: `#313133`
+- GREEN: `#6FBD73`
+- BLACK: `#101820`
+- PURPLE: `#A670AF`
 
 WIP:
 Forget password - removed from partial

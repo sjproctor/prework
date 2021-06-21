@@ -11,58 +11,60 @@ class SideBar extends Component {
     return (
       <>
         <div className="sidebar-main">
-          <h3>HTML</h3>
-            <ul>
-              { html.map(lesson => {
-                return (
-                  <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
-                      { lesson.name }
-                    </NavLink>
-                    <span>{ lesson.completed && "✅" }</span>
-                  </li>
-                )
-              })}
-            </ul>
-          <h3>CSS</h3>
-            <ul>
-              { css.map(lesson => {
-                return (
-                  <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
-                      { lesson.name }
-                    </NavLink>
-                    <span>{ lesson.completed && "✅" }</span>
-                  </li>
-                )
-              })}
-            </ul>
-          <h3>JavaScript</h3>
-            <ul>
-              { javascript.map(lesson => {
-                return (
-                  <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
-                      { lesson.name }
-                    </NavLink>
-                    <span>{ lesson.completed && "✅" }</span>
-                  </li>
-                )
-              })}
-            </ul>
-          <h3>Dev Tools</h3>
-            <ul>
-              { dev.map(lesson => {
-                return (
-                  <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
-                      { lesson.name }
-                    </NavLink>
-                    <span>{ lesson.completed && "✅" }</span>
-                  </li>
-                )
-              })}
-            </ul>
+          <div className="sidebar-text">
+            <h3>HTML</h3>
+              <ul>
+                { html.map(lesson => {
+                  return (
+                    <li key={ lesson.id }>
+                      <NavLink to={ `/lesson/${lesson.id}` } className="sidebar-links">
+                        { lesson.name }
+                      </NavLink>
+                      <span>{ lesson.completed && "✅" }</span>
+                    </li>
+                  )
+                })}
+              </ul>
+            <h3>CSS</h3>
+              <ul>
+                { css.map(lesson => {
+                  return (
+                    <li key={ lesson.id }>
+                      <NavLink to={ `/lesson/${lesson.id}` } className="sidebar-links">
+                        { lesson.name }
+                      </NavLink>
+                      <span>{ lesson.completed && "✅" }</span>
+                    </li>
+                  )
+                })}
+              </ul>
+            <h3>JavaScript</h3>
+              <ul>
+                { javascript.map(lesson => {
+                  return (
+                    <li key={ lesson.id }>
+                      <NavLink to={ `/lesson/${lesson.id}` } className="sidebar-links">
+                        { lesson.name }
+                      </NavLink>
+                      <span>{ lesson.completed && "✅" }</span>
+                    </li>
+                  )
+                })}
+              </ul>
+            <h3>Dev Tools</h3>
+              <ul>
+                { dev.map(lesson => {
+                  return (
+                    <li key={ lesson.id }>
+                      <NavLink to={ `/lesson/${lesson.id}` } className="sidebar-links">
+                        { lesson.name }
+                      </NavLink>
+                      <span>{ lesson.completed && "✅" }</span>
+                    </li>
+                  )
+                })}
+              </ul>
+          </div>
         </div>
       </>
     )
