@@ -25,3 +25,5 @@ Forget password - removed from partial
   <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
 <% end %>
 ```
+
+Accessibility issues: can't see the hover menu when using tab

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import learnLogo from '../assets/LEARN-logo-green.png'
-// import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class Header extends Component {
   render() {
