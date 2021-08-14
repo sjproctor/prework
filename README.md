@@ -21,3 +21,7 @@ Forget password - removed from partial
   <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
 <% end %>
 ```
+
+
+TODO:
+Add and onboarding checklist
