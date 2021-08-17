@@ -8,6 +8,7 @@ import DevMenu from './pages/DevMenu'
 import HTMLMenu from './pages/HTMLMenu'
 import JSMenu from './pages/JSMenu'
 import Landing from './pages/Landing'
+import OnBoarding from './pages/OnBoarding'
 import TopicMenu from './pages/TopicMenu'
 import Lesson from './pages/Lesson'
 import UserProfile from './pages/UserProfile'
@@ -86,6 +87,9 @@ class App extends Component {
               }} />
               <Route path="/profile" render={ (props) => {
                 return <UserProfile current_user={ current_user } />
+              }} />
+              <Route path="/onboarding" render={ (props) => {
+                return <OnBoarding current_user={ current_user } />
               }} />
             </>
           }

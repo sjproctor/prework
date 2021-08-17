@@ -33,7 +33,7 @@ class Header extends Component {
               <ul className="header-drop-menu">
                 <>
                   <li><NavLink to="/profile" className="header-link">Profile</NavLink></li>
-                  <li><NavLink to="/something" className="header-link">Something</NavLink></li>
+                  <li><NavLink to="/onboarding" className="header-link">Onboarding</NavLink></li>
                   <li><a href={ sign_out_route } className="header-link">Sign Out</a></li>
                   <li><a href="https://www.learnacademy.org/contact-us/" className="header-link" target="_blank">Contact LEARN</a></li>
                 </>
@@ -41,7 +41,7 @@ class Header extends Component {
             </li>
           }
           { !logged_in &&
-            <div className="devise-header-button">
+            <div className="block-button">
               <a href={ sign_in_route }>SIGN IN</a>
             </div>
           }
