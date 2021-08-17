@@ -5,7 +5,7 @@ class CSSMenu extends Component {
     const { cssLessons } = this.props
     return (
       <>
-        <div className="individual-menu">
+        <main>
           <h2>CSS</h2>
           <ul>
             { cssLessons.map(lesson => {
@@ -19,7 +19,7 @@ class CSSMenu extends Component {
                 )
               })}
           </ul>
-        </div>
+        </main>
       </>
     )
   }

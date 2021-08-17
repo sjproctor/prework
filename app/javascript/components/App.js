@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
-import Header from './components/Header'
 import Footer from './components/Footer'
+import Header from './components/Header'
+import SideBar from './components/SideBar'
+import CorrectAnswer from './pages/CorrectAnswer'
+import CSSMenu from './pages/CSSMenu'
+import DevMenu from './pages/DevMenu'
+import HTMLMenu from './pages/HTMLMenu'
+import JSMenu from './pages/JSMenu'
 import Landing from './pages/Landing'
 import TopicMenu from './pages/TopicMenu'
-import HTMLMenu from './pages/HTMLMenu'
-import CSSMenu from './pages/CSSMenu'
-import JSMenu from './pages/JSMenu'
-import DevMenu from './pages/DevMenu'
+import Lesson from './pages/Lesson'
 import UserProfile from './pages/UserProfile'
-import CorrectAnswer from './components/CorrectAnswer'
-import Lesson from './components/Lesson'
-import SideBar from './components/SideBar'
+
 import {
   BrowserRouter as Router,
   Route,

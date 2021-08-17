@@ -23,7 +23,7 @@ class Lesson extends Component {
     const { answer } = this.state
     return (
       <>
-        <div className="lesson-main">
+        <main>
           <h3>Topic: { lesson.topic.toUpperCase() }</h3>
           <h3>{ lesson.name }</h3>
           { !lesson.completed &&
@@ -74,9 +74,12 @@ class Lesson extends Component {
           { lesson.completed &&
             <>
               <p>You have already completed this lesson.</p>
+              <NavLink to={ `/lesson/${lesson.id + 1}` }>
+                <button className="block-button">Go to next lesson</button>
+              </NavLink>
             </>
           }
-        </div>
+        </main>
       </>
     )
   }

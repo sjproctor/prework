@@ -16,10 +16,12 @@ class SideBar extends Component {
               { html.map(lesson => {
                 return (
                   <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
+                    <NavLink
+                      to={ `/lesson/${lesson.id}` }
+                      className={`${ lesson.completed === false ? "sidebar-links" : "sidebar-finished" }`}
+                    >
                       { lesson.name }
                     </NavLink>
-                    <span>{ lesson.completed && "✅" }</span>
                   </li>
                 )
               })}
@@ -29,10 +31,12 @@ class SideBar extends Component {
               { css.map(lesson => {
                 return (
                   <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
+                    <NavLink
+                      to={ `/lesson/${lesson.id}` }
+                      className={`${ lesson.completed === false ? "sidebar-links" : "sidebar-finished" }`}
+                    >
                       { lesson.name }
                     </NavLink>
-                    <span>{ lesson.completed && "✅" }</span>
                   </li>
                 )
               })}
@@ -42,10 +46,12 @@ class SideBar extends Component {
               { javascript.map(lesson => {
                 return (
                   <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
+                    <NavLink
+                      to={ `/lesson/${lesson.id}` }
+                      className={`${ lesson.completed === false ? "sidebar-links" : "sidebar-finished" }`}
+                    >
                       { lesson.name }
                     </NavLink>
-                    <span>{ lesson.completed && "✅" }</span>
                   </li>
                 )
               })}
@@ -55,10 +61,12 @@ class SideBar extends Component {
               { dev.map(lesson => {
                 return (
                   <li key={ lesson.id }>
-                    <NavLink to={ `/lesson/${lesson.id}` } className="links">
+                    <NavLink
+                      to={ `/lesson/${lesson.id}` }
+                      className={`${ lesson.completed === false ? "sidebar-links" : "sidebar-finished" }`}
+                    >
                       { lesson.name }
                     </NavLink>
-                    <span>{ lesson.completed && "✅" }</span>
                   </li>
                 )
               })}

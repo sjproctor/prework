@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import learnLogo from '../assets/LEARN-logo-green.png'
-// import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class Header extends Component {
   render() {
@@ -37,7 +35,7 @@ class Header extends Component {
                   <li><NavLink to="/profile" className="header-link">Profile</NavLink></li>
                   <li><NavLink to="/something" className="header-link">Something</NavLink></li>
                   <li><a href={ sign_out_route } className="header-link">Sign Out</a></li>
-                  <li><a href="https://www.learnacademy.org/contact-us/" className="header-link">Contact LEARN</a></li>
+                  <li><a href="https://www.learnacademy.org/contact-us/" className="header-link" target="_blank">Contact LEARN</a></li>
                 </>
               </ul>
             </li>

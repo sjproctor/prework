@@ -1,32 +1,63 @@
 @import 'bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-body, html {
-  color: #313133;
-  font-size: 18px;
-  margin: 0;
-}
+$purple: #A670AF;
+$default-font: #313133;
 
-.block-button {
-  background-color: #A670AF;
-  border: 0px;
+@mixin nav-button {
+  background-color: $purple;
+  border: 1px solid $purple;
   color: white;
   padding: 10px 20px;
 }
 
-.block-button:hover {
+@mixin nav-button-hover {
   background-color: white;
   border: 1px solid #101820;
-  color: #A670AF;
+  color: $purple;
   padding: 10px 20px;
 }
 
+
+body, html {
+  color: $default-font;
+  font-size: 18px;
+  margin: 0;
+}
+
+main {
+  margin-left: 22%;
+  margin-top: 120px;
+  margin-right: 5px;
+}
+
+.block-button {
+  @include nav-button;
+}
+
+.block-button:hover {
+  @include nav-button-hover
+}
+
+/* -----FOOTER----- */
+.footer-main {
+  background-color: #FFF5EE;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  margin-left: 20%;
+  padding: 10px;
+}
 
 /* -----SIDEBAR----- */
 .sidebar-main {
   width: 20%;
   float: left;
-  background-color: #A670AF;
+  color: white;
+  background-color: $purple;
   padding-left: 5px;
   margin-top: -20px;
   padding-top: 20px;
@@ -37,6 +68,23 @@ body, html {
 
 .sidebar-main li {
   list-style: none;
+}
+
+.sidebar-links {
+  color: white;
+}
+
+.sidebar-links:hover {
+  color: white;
+}
+
+.sidebar-finished {
+  color: white;
+  text-decoration: line-through white 3px;
+}
+
+.sidebar-finished:hover {
+  color: white;
 }
 
 /* -----LANDING----- */
@@ -51,7 +99,7 @@ body, html {
 }
 
 .landing-nav {
-  background-color: #A670AF;
+  background-color: $purple;
   color: #101820;
   display: flex;
   flex-direction: row;
@@ -66,7 +114,7 @@ body, html {
 }
 
 .landing-action {
-  background-color: #313133;
+  background-color: $default-font;
   color: #FFFFFF;
   padding: 20px;
   width: 350px;
@@ -78,7 +126,7 @@ body, html {
 .landing-action:hover {
   background-color: white;
   border: 1px solid #101820;
-  color: #A670AF;
+  color: $purple;
 }
 
 .landing-content {
@@ -87,12 +135,6 @@ body, html {
 
 
 /* -----LESSON----- */
-.lesson-main {
-  margin-left: 22%;
-  margin-top: 120px;
-  margin-right: 5px;
-}
-
 input {
   margin: 5px;
 }
@@ -128,13 +170,7 @@ input {
   visibility: hidden;
 }
 
-/* -----HTML/CSS/JS----- */
-.individual-menu {
-  margin-left: 25%;
-  margin-top: 120px;
-}
-
-/* -----LOGIN PAGES----- */
+/* -----DEVISE LOGIN PAGES----- */
 .login-main {
   margin-top: 120px;
   text-align: center;
@@ -163,19 +199,6 @@ input {
 
 #user_remember_me {
   width: 10px;
-}
-
-/* -----FOOTER----- */
-.footer-main {
-  background-color: #FFF5EE;
-  height: 2rem;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 0;
-  width: 80%;
-  margin-left: 20%;
-  padding: 10px;
 }
 
 @import 'header.scss';
@@ -223,7 +246,7 @@ input {
     height: 0px;
   }
   .topics-menu-mobile {
-    background-color: #A670AF;
+    background-color: $purple;
     color: #101820;
     display: flex;
     flex-direction: row;
@@ -237,7 +260,7 @@ input {
     padding-bottom: 50px;
   }
   .topic-nav-mobile {
-    background-color: #A670AF;
+    background-color: $purple;
     color: #101820;
     display: flex;
     flex-direction: row;
@@ -253,14 +276,14 @@ input {
   .topic-nav-mobile:hover {
     background-color: white;
     border: 1px solid #101820;
-    color: #A670AF;
+    color: $purple;
   }
   .individual-menu {
     margin-left: 0%;
   }
   .topic-mobile {
     visibility: visible;
-    background-color: #313133;
+    background-color: $default-font;
     color: #FFFFFF;
     padding: 20px;
     width: 350px;
@@ -271,6 +294,6 @@ input {
   .topic-mobile:hover {
     background-color: white;
     border: 1px solid #101820;
-    color: #A670AF;
+    color: $purple;
   }
 }

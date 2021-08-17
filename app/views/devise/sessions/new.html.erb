@@ -11,9 +11,6 @@
         <%= image_tag 'LEARN.png', :alt => 'LEARN Academy logo', :class => 'header-logo' %>
       </a>
       <h1>Cohort Prework</h1>
-      <span class="devise-header-button">
-        <%= render 'devise/shared/links' %>
-      </span>
     </div>
     <div class="login-main">
       <h2>Log In To Your Account</h2>
@@ -38,7 +35,12 @@
         <div class="actions">
           <%= f.submit 'LOG IN', :class => 'block-button'  %>
         </div>
-      <% end %>
+      <% end %><br />
+
+      <div>
+        Need to create an account?
+      </div>
+      <%= render 'devise/shared/links' %>
 
     </div>
   </body>

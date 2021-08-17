@@ -5,7 +5,7 @@ class DevMenu extends Component {
     const { devLessons } = this.props
     return (
       <>
-        <div className="individual-menu">
+        <main>
           <h2>Dev Tools</h2>
           <ul>
             { devLessons.map(lesson => {
@@ -19,7 +19,7 @@ class DevMenu extends Component {
                 )
               })}
           </ul>
-        </div>
+        </main>
       </>
     )
   }

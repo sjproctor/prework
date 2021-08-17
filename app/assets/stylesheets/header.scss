@@ -1,14 +1,17 @@
 /* -----HEADER----- */
 
+$purple: #A670AF;
+$default-font: #313133;
+
 h1 {
-  color: #A670AF;
+  color: $purple;
   display: inline;
   font-family: 'Dancing Script', cursive;
   font-size: 45px;
 }
 
 .header-main {
-  background-color: #313133;
+  background-color: $default-font;
   padding-right: 50px;
   position: fixed;
   top: 0;
@@ -43,7 +46,7 @@ h1 {
 }
 
 .navbar ul li {
-  background-color: #313133;
+  background-color: $default-font;
   width: 300px;
   margin-left: -200px;
 }
@@ -60,15 +63,4 @@ h1 {
 
 .header-link:hover {
   color: white;
-}
-
-/* -----DEVISE----- */
-.devise-header-button a {
-  background-color: #A670AF;
-  border: 0px;
-  color: white;
-  float: right;
-  margin-top: 30px;
-  padding: 10px 20px;
-  cursor: pointer;
 }
